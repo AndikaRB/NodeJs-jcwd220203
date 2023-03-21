@@ -119,7 +119,7 @@ app.use(express.static(join(__dirname, clientPath)))
 
 //#endregion
 
-app.listen(process.env.PORT, (err) => {
+app.listen(PORT, (err) => {
     if (err) {
         console.log(`ERROR: ${err}`)
     } else {
@@ -127,6 +127,6 @@ app.listen(process.env.PORT, (err) => {
         if (!fs.existsSync("public")) {
             fs.mkdirSync("public")
         }
-        console.log(`APP RUNNING at ${process.env.PORT} ✅`)
+        console.log(`APP RUNNING at ${PORT} ✅`)
     }
 })
